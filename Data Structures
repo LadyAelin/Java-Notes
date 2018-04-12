@@ -1,0 +1,206 @@
+  Code for loop
+  
+  public class For {
+	public static void main(String[] args) {
+
+		for (int waterLevel = 0; waterLevel < 7; waterLevel++) {
+
+			System.out.println("The pool's water level is at " + waterLevel + " feet.");
+
+		}
+		
+	}
+
+}
+
+
+Arrayyssss
+
+ArrayList is a pre-defined Java class. To use it, we must first create an ArrayList object.
+
+import java.util.ArrayList;
+
+public class Temperatures {
+	
+	public static void main(String[] args) {
+
+    ArrayList<Integer> weeklyTemperatures = new ArrayList<Integer>();
+
+	}
+}
+
+
+Accessing elements using get
+
+import java.util.ArrayList;
+
+public class Temperatures {
+	
+	public static void main(String[] args) {
+
+    ArrayList<Integer> weeklyTemperatures = new ArrayList<Integer>();
+
+    weeklyTemperatures.add(78);
+    weeklyTemperatures.add(67);
+    weeklyTemperatures.add(89);
+    weeklyTemperatures.add(94);
+    
+    System.out.println( weeklyTemperatures.get(0) );
+    
+	}
+}
+
+Interset element into an Arraylist: this shifts the indexed elements by 1
+
+import java.util.ArrayList;
+
+public class TemperaturesB {
+	
+	public static void main(String[] args) {
+
+		ArrayList<Integer> weeklyTemperatures = new ArrayList<Integer>();
+		weeklyTemperatures.add(78);
+		weeklyTemperatures.add(67);
+		weeklyTemperatures.add(89);
+		weeklyTemperatures.add(94);
+    
+    weeklyTemperatures.add(2, 111);
+    System.out.println( weeklyTemperatures.get(3) );
+
+
+	}
+}
+
+
+ArrayList and iteration using the for loop
+
+import java.util.ArrayList;
+
+public class TemperaturesC {
+	
+	public static void main(String[] args) {
+
+		ArrayList<Integer> weeklyTemperatures = new ArrayList<Integer>();
+		weeklyTemperatures.add(78);
+		weeklyTemperatures.add(67);
+		weeklyTemperatures.add(89);
+		weeklyTemperatures.add(94);
+		weeklyTemperatures.add(2, 111);
+    
+    for (int j = 0; j < weeklyTemperatures.size(); j++) {
+      
+      System.out.println( weeklyTemperatures.get(j) );
+    }
+
+		
+
+	}
+}
+
+For Each Loop- sooooo funnn. It's crazy simple
+
+The for each loop altogether can be read as "for each Integer element (called grade) in quizGrades, print out the value of grade."
+The loop will print out the value of each Integer element in quizGrades.
+Note: the for each loop does not require a counter.
+
+
+import java.util.ArrayList;
+
+public class TemperaturesForEach {
+	public static void main(String[] args) {
+
+		ArrayList<Integer> weeklyTemperatures = new ArrayList<Integer>();
+		weeklyTemperatures.add(78);
+		weeklyTemperatures.add(67);
+		weeklyTemperatures.add(89); 
+		weeklyTemperatures.add(94);
+		
+		for (Integer temperature : weeklyTemperatures) {
+			System.out.println(temperature);
+		}
+	
+	}
+}
+
+Hash Map
+
+If you provide a HashMap with a key that exists, you can retrieve the value associated with the key.
+
+import java.util.HashMap;
+
+public class Restaurant {
+	public static void main(String[] args) {
+    
+    HashMap<String, Integer> restaurantMenu = new HashMap<String, Integer>();
+
+
+	}
+}
+
+Hash Map with useful data
+
+import java.util.HashMap;
+
+public class Restaurant {
+	public static void main(String[] args) {
+    
+    HashMap<String, Integer> restaurantMenu = new HashMap<String, Integer>();
+    
+    restaurantMenu.put("Turkey Burger", 13);
+    restaurantMenu.put("Naan Pizza", 11);
+    restaurantMenu.put("Cranberry Kale Salad", 10);
+    
+
+
+	}
+}
+
+In order to access a value in a hashmap, you specify the key
+
+import java.util.HashMap;
+
+public class Restaurant {
+	public static void main(String[] args) {
+    
+    HashMap<String, Integer> restaurantMenu = new HashMap<String, Integer>();
+    
+    restaurantMenu.put("Turkey Burger", 13);
+    restaurantMenu.put("Naan Pizza", 11);
+    restaurantMenu.put("Cranberry Kale Salad", 10);
+    
+    System.out.println( restaurantMenu.get("Naan Pizza") );
+    
+
+
+	}
+}
+
+Iterating over a HashMap
+
+import java.util.HashMap;
+
+public class RestaurantForEach {
+	public static void main(String[] args) {
+
+		HashMap<String, Integer> restaurantMenu = new HashMap<String, Integer>();
+
+		restaurantMenu.put("Turkey Burger", 13);
+		restaurantMenu.put("Naan Pizza", 11);
+		restaurantMenu.put("Cranberry Kale Salad", 10);
+
+		System.out.println(restaurantMenu.size() );
+
+		for (String item : restaurantMenu.keySet()) {
+
+			System.out.println("A " + item + " costs " + restaurantMenu.get(item) + " dollars.");
+
+		}
+	}
+}
+
+REVIEWWWW
+
+For Loops: used to repeatedly run a block of code
+For Each Loops: a concise version of a for loop
+ArrayList: stores a list of data
+HashMap: stores keys and associated values like a dictionary
